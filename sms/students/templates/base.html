@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <style>
+        nav { background: #f0f0f0; padding: 1em; }
+        .alert { padding: 0.5em; margin: 1em 0; }
+        .alert-success { background: #d4edda; }
+        table { width: 100%; border-collapse: collapse; }
+        td, th { border: 1px solid #ddd; padding: 8px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'student_list' %}">Student List</a> |
+        <a href="{% url 'student_add' %}">Add Student</a>
+    </nav>
+    <div class="content">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
