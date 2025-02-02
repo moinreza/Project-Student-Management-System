@@ -37,7 +37,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Visit `[http://localhost:8000/students/](http://127.0.0.1:8000/students/)` to access the application.
+Visit `(http://127.0.0.1:8000/students/)` to access the application.
 
 ## 📚 How to Use
 1. **Add Student**: Click "Add Student" in navigation
